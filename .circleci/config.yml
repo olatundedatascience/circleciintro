@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   one:
     docker:
-      - image: circleci/node@1.1
+      - image: circleci/node
     steps:
       - checkout
       - run: echo "running npm install  >>>>>"
@@ -10,7 +10,7 @@ jobs:
       - run: npm install
   two:
     docker:
-      - image: circleci/node@1.1
+      - image: circleci/node
     steps:
       - checkout
       - run: node app.js
