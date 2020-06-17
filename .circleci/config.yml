@@ -2,10 +2,10 @@ version: 2.1
 jobs:
   one:
     docker:
-      - image: circle/node@1.1
+      - image: circleci/node@1.1
     steps:
       - checkout
-      - run: echo "running npm install"
+      - run: echo "running npm install  >>>>>"
       - run: sleep 10
       - run: npm install
   two:
