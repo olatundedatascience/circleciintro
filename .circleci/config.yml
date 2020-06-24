@@ -17,7 +17,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: npm installq
+      - run: npm install
       - run: node app.js
       - run: npm run test
 workflows:
