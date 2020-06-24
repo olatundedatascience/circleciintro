@@ -7,13 +7,17 @@ jobs:
       - checkout
       - run: echo "running npm install  >>>>>"
       - run: sleep 10
-      - run: npm install
+      - run:
+          name: installing necessary files
+          command: npm install
+          background: true
+
   two:
     docker:
       - image: circleci/node
     steps:
       - checkout
-      - run: npm install
+      - run: npm installq
       - run: node app.js
       - run: npm run test
 workflows:
